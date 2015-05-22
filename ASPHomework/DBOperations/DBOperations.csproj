@@ -47,6 +47,12 @@
     <Compile Include="TestingUsersHelpercs.cs" />
     <Compile Include="UsersHelper.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsAzureDB\WindowsAzureDB.csproj">
+      <Project>{f389bc4d-c914-4468-aac0-0bafd7771bea}</Project>
+      <Name>WindowsAzureDB</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
