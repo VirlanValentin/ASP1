@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1ebf27e14aaa4eb99ca39abc18646c49" Name="Diagram1">
+        <EntityTypeShape EntityType="ervinModel.Domains" Width="1.5" PointX="0.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.Hints" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.Questions" Width="1.5" PointX="4" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.Subdomains" Width="1.5" PointX="2.125" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.TestQuestions" Width="1.5" PointX="6.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.Tests" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.Users" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="ervinModel.FK_Subdomains_Domains" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Users_Hints" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Questions_Subdomains" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_TestQuestions_Questions" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions1" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions2" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions3" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions4" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions5" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions6" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions7" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions8" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_TestQuestions9" ManuallyRouted="false" />
+        <AssociationConnector Association="ervinModel.FK_Tests_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
