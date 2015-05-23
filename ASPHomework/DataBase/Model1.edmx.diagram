@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1ebf27e14aaa4eb99ca39abc18646c49" Name="Diagram1">
-        <EntityTypeShape EntityType="ervinModel.Domains" Width="1.5" PointX="0.5" PointY="2.5" IsExpanded="true" />
+      <Diagram DiagramId="21ba4d0a225c42078aa73862d7d331c1" Name="Diagram1">
+        <EntityTypeShape EntityType="ervinModel.Domains" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="ervinModel.Hints" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="ervinModel.Questions" Width="1.5" PointX="4" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ervinModel.Subdomains" Width="1.5" PointX="2.125" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ervinModel.TestQuestions" Width="1.5" PointX="6.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.Questions" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.Subdomains" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ervinModel.TestQuestions" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ervinModel.Tests" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ervinModel.Users" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
         <AssociationConnector Association="ervinModel.FK_Subdomains_Domains" ManuallyRouted="false" />

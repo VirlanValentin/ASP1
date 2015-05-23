@@ -7,28 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsAzureDB
+namespace DataBase
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Questions
     {
-        public Users()
+        public Questions()
         {
-            this.Tests = new HashSet<Tests>();
+            this.TestQuestions = new HashSet<TestQuestions>();
         }
     
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public bool isAdmin { get; set; }
-        public int HintId { get; set; }
-        public string HintAnswer { get; set; }
+        public string Question { get; set; }
+        public string Answers { get; set; }
+        public int RightAnswer { get; set; }
+        public string Argumentation { get; set; }
+        public bool TypeOfQuestion { get; set; }
+        public int IdSubdomain { get; set; }
     
-        public virtual Hints Hints { get; set; }
-        public virtual ICollection<Tests> Tests { get; set; }
+        public virtual Subdomains Subdomains { get; set; }
+        public virtual ICollection<TestQuestions> TestQuestions { get; set; }
     }
 }

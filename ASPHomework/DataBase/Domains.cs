@@ -7,27 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsAzureDB
+namespace DataBase
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Questions
+    public partial class Domains
     {
-        public Questions()
+        public Domains()
         {
-            this.TestQuestions = new HashSet<TestQuestions>();
+            this.Subdomains = new HashSet<Subdomains>();
         }
     
         public int Id { get; set; }
-        public string Question { get; set; }
-        public string Answers { get; set; }
-        public int RightAnswer { get; set; }
-        public string Argumentation { get; set; }
-        public bool TypeOfQuestion { get; set; }
-        public int IdSubdomain { get; set; }
+        public string DomainName { get; set; }
     
-        public virtual Subdomains Subdomains { get; set; }
-        public virtual ICollection<TestQuestions> TestQuestions { get; set; }
+        public virtual ICollection<Subdomains> Subdomains { get; set; }
     }
 }

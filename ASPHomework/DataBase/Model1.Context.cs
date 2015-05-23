@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsAzureDB
+namespace DataBase
 {
     using System;
     using System.Data.Entity;
