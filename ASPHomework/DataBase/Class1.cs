@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBOperations
+namespace DataBase
 {
-    public static class StatisticsHelper
+    public class Class1
     {
     }
 }

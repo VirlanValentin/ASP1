@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBOperations
 {
-    static class DemoHelper
+    public static class DemoHelper
     {
     }
 }

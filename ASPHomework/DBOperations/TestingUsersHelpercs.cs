@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBOperations
 {
-    static  class TestingUsersHelpercs
+    public static  class TestingUsersHelpercs
     {
     }
 }

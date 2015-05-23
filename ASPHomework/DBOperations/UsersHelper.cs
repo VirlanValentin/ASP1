@@ -4,9 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using DataBase;
+
 namespace DBOperations
 {
-   static class UsersHelper
+   public static class UsersHelper
     {
+       public static void AddHint()
+        {
+            var hint = new Hints {Question = "How old are you?"};
+            using (var context = new ervinEntities())
+            {
+                context.Hints.Add(hint);
+                context.SaveChanges();
+            }
+       }
     }
 }
