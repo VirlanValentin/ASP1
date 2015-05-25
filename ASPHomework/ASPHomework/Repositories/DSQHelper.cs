@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using ASPHomework.Models;
 using DataBase;
 
@@ -19,19 +20,22 @@ namespace ASPHomework.Repositories
             {
                 var domain = new Domains {DomainName = name};
                 context.Domains.Add(domain);
+                context.SaveChanges();
             }
         }
 
-        public static List<DomainModel> GetAllDomains()
+        public static IEnumerable<SelectListItem> GetAllDomains()
         {
-            var domainModels = new List<DomainModel>();
+           // var domainModels = new List<DomainModel>();
+            IEnumerable<SelectListItem> dom;
             using (var context = new ervinEntities())
             {
                 var aux = context.Domains.Where(x => x.Id > 0).ToList();
-                domainModels.AddRange(aux.Select(dom => new DomainModel() {DomainName = dom.DomainName}));
+                dom = aux.Select(d => new SelectListItem {Text = d.DomainName, Value = d.DomainName});
             }
-            return domainModels;
+            return dom;
         }
+
         #endregion
 
 
