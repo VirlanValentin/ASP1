@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.EnterpriseServices.Internal;
 using System.Linq;
-using System.Web;
 using DataBase;
 
 namespace ASPHomework.Repositories
