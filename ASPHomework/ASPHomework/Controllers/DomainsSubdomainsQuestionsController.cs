@@ -11,23 +11,21 @@ namespace ASPHomework.Controllers
     public class DomainsSubdomainsQuestionsController : Controller
     {
         // GET: DomainsSubdomainsQuestions
-        public ActionResult Index()
+        public ActionResult Subdomain()
         {
             ViewBag.domains = DSQHelper.GetAllDomains().ToList();
-
             return View();
         }
 
         [HttpPost]
-        [ActionName("Index")]
-        public ActionResult Index(SubdomainModel sm, string domains)
+        public ActionResult Subdomain(SubdomainModel sm, string domains)
         {
             if (ModelState.IsValid)
             {
                 // TODO: Add insert logic here
                 sm.DomainName = domains;
                 DSQHelper.AddSubdomain(sm);
-                return RedirectToAction("Index");
+                return RedirectToAction("Subdomain");
             }
 
             ViewBag.domains = DSQHelper.GetAllDomains().ToList();
@@ -37,9 +35,24 @@ namespace ASPHomework.Controllers
 
         public ActionResult Question()
         {
-         //   DSQHelper.AddDomain("Capitole speciale .NET");
-            
+            ViewBag.subdomains = DSQHelper.GetAllSubdomains().ToList();            
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Question(QuestionsModel qm, string subdomains)
+        {
+            if (ModelState.IsValid)
+            {
+                // TODO: Add insert logic here
+                qm.SubdomainName = subdomains;
+                DSQHelper.AddQuestion(qm);
+                return RedirectToAction("Question");
+            }
+
+            ViewBag.subdomains = DSQHelper.GetAllSubdomains().ToList();   
+
+            return View(qm);
         }
     }
 }

@@ -14,9 +14,6 @@ namespace ASPHomework.Models
         [DisplayName("Subdomeniu")]
         public string SubdomainName { get; set; }
 
-        [System.Web.Mvc.HiddenInput(DisplayValue = false)]
-        public int IdDomain { get; set; }
-
         [DisplayName("Domeniu")]
         public string DomainName { get; set; }
         

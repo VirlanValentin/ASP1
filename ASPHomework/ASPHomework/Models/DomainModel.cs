@@ -9,10 +9,6 @@ namespace ASPHomework.Models
 {
     public class DomainModel
     {
-        public IEnumerable<SelectListItem> DomainName
-        {
-            get { return DSQHelper.GetAllDomains(); }
-            set { }
-        }
+        public IEnumerable<SelectListItem> DomainName { get; set; }
     }
 }

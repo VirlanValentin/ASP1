@@ -42,12 +42,16 @@ namespace ASPHomework.Repositories
         #region Subdomain
         //SubdomainHelper
         //GetAll
-        public static List<Subdomains> GetAllSubdomains()
+        public static IEnumerable<SelectListItem> GetAllSubdomains()
         {
+            IEnumerable<SelectListItem> subdom;
             using (var context = new ervinEntities())
             {
-                return context.Subdomains.ToList();
+                var aux = context.Subdomains.Where(x => x.Id > 0).ToList();
+                subdom = aux.Select(d => new SelectListItem { Text = d.SubdomainName, Value = d.SubdomainName });
             }
+
+            return subdom;
         }
 
         //Add
@@ -55,7 +59,7 @@ namespace ASPHomework.Repositories
         {
             using (var context = new ervinEntities())
             {
-                var subdomain = new Subdomains(){SubdomainName = subdomainModel.SubdomainName};
+                var subdomain = new Subdomains(){ SubdomainName = subdomainModel.SubdomainName };
                 var domain = context.Domains.First(x => x.DomainName == subdomainModel.DomainName);
                 subdomain.IdDomain = domain.Id;
                 context.Subdomains.Add(subdomain);
@@ -103,11 +107,23 @@ namespace ASPHomework.Repositories
             }
         }
         //Add
-        public static void AddQuestion(Questions question)
+        public static void AddQuestion(QuestionsModel question)
         {
             using (var context = new ervinEntities())
             {
-                context.Questions.Add(question);
+                var sdId = context.Subdomains.FirstOrDefault(x => x.SubdomainName == question.SubdomainName).Id;
+
+                var q = new Questions()
+                {
+                    Question = question.Question,
+                    Answers = question.Answer1 + "~" + question.Answer2 + "~" + question.Answer3 + "~" + question.Answer4 + "~" + question.Answer5,
+                    Argumentation = question.Argumentation,
+                    TypeOfQuestion = question.TypeOfQuestion,
+                    RightAnswer = question.RightAnswer,
+                    IdSubdomain = sdId
+                };
+
+                context.Questions.Add(q);
                 context.SaveChanges();
             }
         }

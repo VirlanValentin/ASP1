@@ -129,6 +129,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DomainModel.cs" />
+    <Compile Include="Models\QuestionsModel.cs" />
     <Compile Include="Models\SubdomainModel.cs" />
     <Compile Include="Models\UserRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,12 +177,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Users\Register.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\DomainsSubdomainsQuestions\Index.cshtml" />
     <Content Include="Views\DomainsSubdomainsQuestions\Question.cshtml" />
+    <Content Include="Views\DomainsSubdomainsQuestions\Subdomain.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Demo\" />
+    <Folder Include="Views\QuestionsModel\" />
     <Folder Include="Views\Statistics\" />
     <Folder Include="Views\TestingUsers\" />
   </ItemGroup>
